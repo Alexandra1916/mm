@@ -1,0 +1,292 @@
+<html lang="es"><head>
+    <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efecto Linterna sobre Pared para M❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+  <style>
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    background-color: #000;
+}
+
+#scene-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#love-text {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+#flashlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+            circle at var(--x, 50%) var(--y, 50%),
+            transparent 0,
+            rgba(0, 0, 0, 0.5) 100px,
+            rgba(0, 0, 0, 0.95) 200px,
+            black 300px
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de;
+    }
+    50% {
+        text-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #ff00de, 0 0 55px #ff00de, 0 0 70px #ff00de;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de;
+    }
+}
+
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.secret-message {
+    position: absolute;
+    color: #1ceb9b;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px #1ceb9b, 0 0 10px #1ceb9b;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    #flashlight-overlay {
+        background: radial-gradient(
+                circle at var(--x, 50%) var(--y, 50%),
+                transparent 0,
+                rgba(0, 0, 0, 0.5) 50px,
+                rgba(0, 0, 0, 0.95) 100px,
+                black 150px
+        );
+    }
+
+    .secret-message {
+        font-size: 1.4rem;
+    }
+
+}</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.m-0{margin:0px}.h-screen{height:100vh}.cursor-none{cursor:none}.select-none{-webkit-user-select:none;user-select:none}.overflow-hidden{overflow:hidden}.text-center{text-align:center}.text-7xl{font-size:4.5rem;line-height:1}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:text-9xl{font-size:8rem;line-height:1}}</style></head>
+<body class="h-screen m-0 overflow-hidden cursor-none">
+
+<div id="scene-wrapper" style="background-image: url(&quot;https://res.cloudinary.com/dsgtnbq6l/image/upload/w_1920/q_auto/f_auto/v1755738406/general/nngabi6ev0dcsber9b3c.jpg&quot;);">
+  <div class="text-center">
+    <h1 id="love-text" class="font-pacifico text-7xl md:text-9xl text-white select-none">
+      Te quiero
+    </h1>
+  </div>
+
+  <div id="secrets-container"><span class="secret-message" style="top: 20%; left: 15%; opacity: 0;">Para siempre ♡</span><span class="secret-message" style="top: 80%; left: 10%; transform: rotate(-20deg); opacity: 0;">Mi lugar feliz</span><span class="secret-message" style="top: 15%; left: 80%; opacity: 0;">Juntos</span><span class="secret-message" style="top: 20%; left: 50%; transform: translate(-50%, -50%) scale(2); font-size: 3rem; opacity: 0;">✨</span><span class="secret-message" style="top: 75%; left: 74%; transform: rotate(8deg); opacity: 0;">Eres mi sol</span><span class="secret-message" style="top: 55%; left: 20%; transform: rotate(5deg); opacity: 0;">Te amo</span><span class="secret-message" style="top: 35%; left: 70%; opacity: 0;">Contigo todo</span></div>
+
+  <canvas id="particle-canvas" width="400" height="642"></canvas>
+</div>
+
+<div id="flashlight-overlay" style="--x: 1060px; --y: 691px;"></div>
+
+<script type="module">
+document.addEventListener('DOMContentLoaded', () => {
+
+    const secretsData = [
+        {text: 'Para siempre ♡', top: '20%', left: '15%'},
+        {text: 'Mi lugar feliz', top: '80%', left: '10%', transform: 'rotate(-20deg)'},
+        {text: 'Juntos', top: '15%', left: '80%'},
+        {text: 'N&M', top: '20%', left: '50%', transform: 'translate(-50%, -50%) scale(2)', fontSize: '3rem'},
+        {text: 'oño', top: '75%', left: '74%', transform: 'rotate(8deg)'},
+        {text: 'Te amo', top: '55%', left: '20%', transform: 'rotate(5deg)'},
+        {text: 'Contigo todo', top: '35%', left: '70%'},
+    ];
+
+    const secretsContainer = document.getElementById('secrets-container');
+
+    function createSecrets() {
+        secretsData.forEach(data => {
+            const secretEl = document.createElement('span');
+            secretEl.classList.add('secret-message');
+            secretEl.textContent = data.text;
+
+            secretEl.style.top = data.top;
+            secretEl.style.left = data.left;
+            if (data.transform) secretEl.style.transform = data.transform;
+
+            if (data.fontSize && window.innerWidth >= 768) {
+                secretEl.style.fontSize = data.fontSize;
+            }
+            if (data.text === 'Contigo todo' && window.innerWidth < 768) {
+                secretEl.style.fontSize = '1.1rem';
+            }
+
+
+            secretsContainer.appendChild(secretEl);
+        });
+    }
+
+    createSecrets();
+
+
+    const sceneWrapper = document.getElementById('scene-wrapper');
+    const imageUrl = 'https://res.cloudinary.com/dsgtnbq6l/image/upload/w_1920/q_auto/f_auto/v1755738406/general/nngabi6ev0dcsber9b3c.jpg';
+    sceneWrapper.style.backgroundImage = `url('${imageUrl}')`;
+
+    const overlay = document.getElementById('flashlight-overlay');
+    let mousePos = {x: 0, y: 0};
+    let isUpdatePending = false;
+
+    const secrets = document.querySelectorAll('.secret-message');
+
+    let flashlightRadius = window.innerWidth < 768 ? 70 : 120;
+
+    function checkSecrets() {
+        secrets.forEach(secret => {
+            const rect = secret.getBoundingClientRect();
+            const secretX = rect.left + rect.width / 2;
+            const secretY = rect.top + rect.height / 2;
+            const distance = Math.sqrt(
+                Math.pow(mousePos.x - secretX, 2) + Math.pow(mousePos.y - secretY, 2)
+            );
+            if (distance < flashlightRadius) {
+                secret.style.opacity = '1';
+            } else {
+                secret.style.opacity = '0';
+            }
+        });
+    }
+
+    function updateFlashlightPosition(e) {
+        const pos = e.touches ? e.touches[0] : e;
+        mousePos.x = pos.clientX;
+        mousePos.y = pos.clientY;
+
+        if (!isUpdatePending) {
+            isUpdatePending = true;
+            requestAnimationFrame(renderFlashlight);
+        }
+    }
+
+    function renderFlashlight() {
+        overlay.style.setProperty('--x', `${mousePos.x}px`);
+        overlay.style.setProperty('--y', `${mousePos.y}px`);
+        isUpdatePending = false;
+    }
+
+    document.addEventListener('mousemove', updateFlashlightPosition);
+    document.addEventListener('touchmove', updateFlashlightPosition, {passive: true});
+
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particlesArray;
+    const particleCount = 150;
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+        constructor() {
+            this.reset();
+            this.startX = Math.random() * canvas.width;
+            this.startY = Math.random() * canvas.height;
+            this.x = this.startX;
+            this.y = this.startY;
+        }
+
+        reset() {
+            this.radius = Math.random() * 2 + 1.5;
+            this.maxLife = Math.random() * 15 + 10;
+            this.life = this.maxLife;
+            this.startX = Math.random() * canvas.width;
+            this.startY = Math.random() * canvas.height;
+            this.x = this.startX;
+            this.y = this.startY;
+            this.opacity = 0;
+        }
+
+        update() {
+            this.life -= 1 / 60;
+            if (this.life <= 0) {
+                this.reset();
+            }
+            const progress = (this.maxLife - this.life) / this.maxLife;
+            this.x = this.startX + (progress * 40);
+            this.y = this.startY - (progress * 20);
+            this.opacity = Math.sin(progress * Math.PI) * 0.7;
+        }
+
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.opacity;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            ctx.shadowColor = 'rgba(255, 105, 180, 0.9)';
+            ctx.shadowBlur = 15;
+            ctx.fillStyle = 'rgba(255, 200, 230, 0.9)';
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    function initParticles() {
+        particlesArray = [];
+        for (let i = 0; i < particleCount; i++) {
+            particlesArray.push(new Particle());
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+            particlesArray[i].draw();
+        }
+        checkSecrets();
+        requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+});</script>
+
+</body>
+</html>
